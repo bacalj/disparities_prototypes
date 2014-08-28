@@ -1,7 +1,14 @@
+//each year
+	//data like this
+	// | YEAR | OBJECTIVE | POPULATION | PERCENT |
+	//for each year, find the population with the highest number and plot it where y = %
+	//for each year, find the population with the lowest number and plot it where y = 
+	//plot a line from lo to hi
+
 $(document).ready(function() {
 
 	var i = 0;
-	
+
 	var myData = 
 	[
 		{
@@ -63,9 +70,15 @@ $(document).ready(function() {
 					enabled: true,
 					align:'center',
 					formatter: function () {
-						var label = ' ' + 'calc label here';
-						return this.y + label;
+						var label = this.point.pops + ' ' + this.y;
+						console.log(this);
+						return label;
 					}
+					/*formatter: function() {
+    				var lowPoint = getLow(this.point.low);
+    				var highPoint = getHigh(this.point.high);
+    				return this.y;
+					}*/
 				},
 			}
 		},
