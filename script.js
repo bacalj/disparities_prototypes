@@ -2,7 +2,7 @@
 	//data like this
 	// | YEAR | OBJECTIVE | POPULATION | PERCENT |
 	//for each year, find the population with the highest number and plot it where y = %
-	//for each year, find the population with the lowest number and plot it where y = 
+	//for each year, find the population with the lowest number and plot it where y =
 	//plot a line from lo to hi
 
 $(document).ready(function() {
