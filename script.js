@@ -1,77 +1,76 @@
 $(document).ready(function() {
 
+	var i = 0;
+	
 	var myData = 
 	[
-		[66.7, 87.5],
-  	[67.1, 87.0],
-  	[65.0, 86.3],
-  	[65.8, 87.1],
-  	[69.6, 87.9]
-  ];
-
-	$('#chart_container').highcharts(
-	{
-		chart: 
 		{
+			x:2008, low:70, high:80, pops:"Bears"
+		},
+
+		{
+			x:2009, low:60, high:87, pops:"Geese"
+		},
+
+		{
+			x:2010, low:70, high:77, pops:"Snakes"
+		},
+
+		{
+			x:2011, low:72, high:87, pops:"Trolls"
+		},
+
+		{
+			x:2012, low:60, high:67, pops:"Fish"
+		}
+	];
+
+	$('#chart_container').highcharts({
+		chart: {
 			type: 'columnrange',
 			inverted: false
 		},
 
-		title: 
-		{
-			text: 'Disparities Overview by Race/Ethnicity'
+		title: {
+			text: 'Summary Measures of Health Disparities'
 		},
 
-		subtitle: 
-		{
-			text: 'Persons with medical insurance (percent, <65 years)'
+		subtitle: {
+			text: 'by Race/Ethnicity'
 		},
 
-		xAxis: 
-		{
-			categories: ['2008', '2009', '2010', '2011', '2012']
-		},
-
-		yAxis: 
-		{
+		yAxis: {
 			min: 50,
 			max: 100,
-			title: 
-			{
+			title: {
 				text: '% (percent)'
 			}
 		},
 
-		tooltip: 
-		{
+		tooltip: {
 			valueSuffix: '%'
 		},
 
-		plotOptions: 
-		{
+		plotOptions: {
 
-			series: 
-			{
+			series: {
 				color:'black',
 				pointWidth: 2
 			}, 
 
-			columnrange: 
-			{
-				dataLabels: 
-				{
+			columnrange: {
+				dataLabels: {
 					enabled: true,
 					align:'center',
-					formatter: function () 
-					{
-						return this.y;
+					formatter: function () {
+						var label = ' ' + 'calc label here';
+						return this.y + label;
 					}
 				},
 			}
 		},
 
-		legend: 
-		{
+		legend: {
 			enabled: false
 		},
 
@@ -83,5 +82,4 @@ $(document).ready(function() {
 			}
 		]
 	});
-	console.log(this);
 });
