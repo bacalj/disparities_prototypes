@@ -1,83 +1,87 @@
 $(document).ready(function() {
 
-		$('#chart_container').highcharts(
+	var myData = 
+	[
+		[66.7, 87.5],
+  	[67.1, 87.0],
+  	[65.0, 86.3],
+  	[65.8, 87.1],
+  	[69.6, 87.9]
+  ];
+
+	$('#chart_container').highcharts(
+	{
+		chart: 
+		{
+			type: 'columnrange',
+			inverted: false
+		},
+
+		title: 
+		{
+			text: 'Disparities Overview by Race/Ethnicity'
+		},
+
+		subtitle: 
+		{
+			text: 'Persons with medical insurance (percent, <65 years)'
+		},
+
+		xAxis: 
+		{
+			categories: ['2008', '2009', '2010', '2011', '2012']
+		},
+
+		yAxis: 
+		{
+			min: 50,
+			max: 100,
+			title: 
+			{
+				text: '% (percent)'
+			}
+		},
+
+		tooltip: 
+		{
+			valueSuffix: '%'
+		},
+
+		plotOptions: 
 		{
 
-				chart: 
-				{
-					type: 'columnrange',
-					inverted: false
-				},
+			series: 
+			{
+				color:'black',
+				pointWidth: 2
+			}, 
 
-				title: 
+			columnrange: 
+			{
+				dataLabels: 
 				{
-					text: 'Disparities Overview by Race/Ethnicity'
-				},
-
-				subtitle: 
-				{
-					text: 'Persons with medical insurance (percent, <65 years)'
-				},
-
-				xAxis: 
-				{
-					categories: ['2008', '2009', '2010', '2011', '2012']
-				},
-
-				yAxis: 
-				{
-					min: 50,
-					max: 100,
-					title: 
+					enabled: true,
+					align:'center',
+					formatter: function () 
 					{
-						text: '% (percent)'
+						return this.y;
 					}
 				},
+			}
+		},
 
-				tooltip: 
-				{
-					valueSuffix: '%'
-				},
+		legend: 
+		{
+			enabled: false
+		},
 
-				plotOptions: 
-				{
-
-					series: 
-					{
-						color:'black',
-						pointWidth: 2
-					}, 
-
-					columnrange: 
-					{
-						dataLabels: 
-						{
-							enabled: true,
-							align:'center',
-							formatter: function () 
-							{
-								return this.y;
-							}
-						},
-					}
-				},
-
-				legend: 
-				{
-					enabled: false
-				},
-
-				series: [
-				{
-					name: 'Disparities',
-					data: [
-						[66.7, 87.5],
-						[67.1, 87.0],
-						[65.0, 86.3],
-						[65.8, 87.1],
-						[69.6, 87.9]
-					]
-				}]
-		});
-		console.log(this);
+		series: 
+		[
+			{
+				name: 'Disparities',
+				data: myData
+			}
+		]
+	});
+	console.log(this);
 });
