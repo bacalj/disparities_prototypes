@@ -12,3 +12,7 @@
   border-radius: 7px;
   padding:10px;
 }
+
+g {
+  border:2px solid blue;
+}

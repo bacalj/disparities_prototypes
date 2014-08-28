@@ -1,60 +1,93 @@
-$(function () {
 
-    $('#chart_container').highcharts({
+/*
+		var options = {
+				chart: {
+					renderTo: 'container',
+					type: 'spline'
+				},
+				series: [{}]
+		};
 
-        chart: {
-            type: 'columnrange',
-            inverted: false
-        },
+		$.getJSON('data.json', function(data) {
+				options.series[0].data = data;
+				var chart = new Highcharts.Chart(options);
+		});
+*/
+$(document).ready(function() {
 
-        title: {
-            text: 'Disparities Overview by Race/Ethnicity'
-        },
+	$.getJSON("data.json", function( data ) {
 
-        subtitle: {
-            text: 'Persons with medical insurance (percent, <65 years)'
-        },
+				$('#chart_container').highcharts({
 
-        xAxis: {
-            categories: ['2008', '2009', '2010', '2011', '2012']
-        },
+				chart: {
+					type: 'columnrange',
+					inverted: false
+				},
 
-        yAxis: {
-            title: {
-                text: '% (percent)'
-            }
-        },
+				title: {
+					text: 'Disparities Overview by Race/Ethnicity'
+				},
 
-        tooltip: {
-            valueSuffix: '%'
-        },
+				subtitle: {
+					text: 'Persons with medical insurance (percent, <65 years)'
+				},
 
-        plotOptions: {
-            columnrange: {
-                dataLabels: {
-                    enabled: true,
-                    formatter: function () {
-                        //return this.y //append label perhaps;
-                    }
-                }
-            }
-        },
+				xAxis: {
+					categories: ['2008', '2009', '2010', '2011', '2012']
+				},
 
-        legend: {
-            enabled: false
-        },
+				yAxis: {
+					min: 50,
+					max: 100,
+					title: {
+						text: '% (percent)'
+					}
+				},
 
-        series: [{
-            name: 'Series Name',
-            data: [
-                [66.7, 87.5],
-                [67.1, 87.0],
-                [65.0, 86.3],
-                [65.8, 87.1],
-                [69.6, 87.9]
-            ]
-        }]
+				tooltip: {
+					valueSuffix: '%'/*,
+					formatter: function() {
+						return 'The value for <b>' + this.x + '</b> is <b>' + this.y + '</b>, in series '+ this.series.name;
+					}*/
+				},
 
-    });
+				plotOptions: {
 
+						series: {
+							data: data,
+							color:'black',
+							pointWidth: 2
+						}, 
+
+						columnrange: {
+							dataLabels: {
+								enabled: true,
+								align:'center',
+								formatter: function () {
+									return this.y;
+								}
+							},
+						}
+				},
+
+				legend: {
+					enabled: false
+				},
+
+				series: [{
+					name: 'Disparities',
+					data: [
+						[66.7, 87.5],
+						[67.1, 87.0],
+						[65.0, 86.3],
+						[65.8, 87.1],
+						[69.6, 87.9]
+					]
+				}]
+		});
+
+	});
+
+
+		console.log(this);
 });
