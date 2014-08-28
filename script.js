@@ -1,80 +1,74 @@
-
-/*
-		var options = {
-				chart: {
-					renderTo: 'container',
-					type: 'spline'
-				},
-				series: [{}]
-		};
-
-		$.getJSON('data.json', function(data) {
-				options.series[0].data = data;
-				var chart = new Highcharts.Chart(options);
-		});
-*/
 $(document).ready(function() {
 
-	$.getJSON("data.json", function( data ) {
+		$('#chart_container').highcharts(
+		{
 
-				$('#chart_container').highcharts({
-
-				chart: {
+				chart: 
+				{
 					type: 'columnrange',
 					inverted: false
 				},
 
-				title: {
+				title: 
+				{
 					text: 'Disparities Overview by Race/Ethnicity'
 				},
 
-				subtitle: {
+				subtitle: 
+				{
 					text: 'Persons with medical insurance (percent, <65 years)'
 				},
 
-				xAxis: {
+				xAxis: 
+				{
 					categories: ['2008', '2009', '2010', '2011', '2012']
 				},
 
-				yAxis: {
+				yAxis: 
+				{
 					min: 50,
 					max: 100,
-					title: {
+					title: 
+					{
 						text: '% (percent)'
 					}
 				},
 
-				tooltip: {
-					valueSuffix: '%'/*,
-					formatter: function() {
-						return 'The value for <b>' + this.x + '</b> is <b>' + this.y + '</b>, in series '+ this.series.name;
-					}*/
+				tooltip: 
+				{
+					valueSuffix: '%'
 				},
 
-				plotOptions: {
+				plotOptions: 
+				{
 
-						series: {
-							data: data,
-							color:'black',
-							pointWidth: 2
-						}, 
+					series: 
+					{
+						color:'black',
+						pointWidth: 2
+					}, 
 
-						columnrange: {
-							dataLabels: {
-								enabled: true,
-								align:'center',
-								formatter: function () {
-									return this.y;
-								}
-							},
-						}
+					columnrange: 
+					{
+						dataLabels: 
+						{
+							enabled: true,
+							align:'center',
+							formatter: function () 
+							{
+								return this.y;
+							}
+						},
+					}
 				},
 
-				legend: {
+				legend: 
+				{
 					enabled: false
 				},
 
-				series: [{
+				series: [
+				{
 					name: 'Disparities',
 					data: [
 						[66.7, 87.5],
@@ -85,9 +79,5 @@ $(document).ready(function() {
 					]
 				}]
 		});
-
-	});
-
-
 		console.log(this);
 });
