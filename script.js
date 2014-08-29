@@ -80,19 +80,22 @@ $(document).ready(function() {
 		{
 			type: 'columnrange',
 		  name: 'Disparities',
+		  pointPadding: 0.3,
+      
 		  data:
 		  [
-   			{ x:2008, low: 60, high: 90 },
-   			{ x:2009, low: 50, high: 80 },
-   			{ x:2010, low: 60, high: 70 },
-   			{ x:2011, low: 50, high: 90 },
-   			{ x:2012, low: 50, high: 90 }
+   			{ x:2008, low: 66.7, high: 87.5}, //this is temporary - hard coded in for testing alignment
+   			{ x:2009, low: 67.1, high: 86.8 }, //working on a function below to pull necessary data from object
+   			{ x:2010, low: 56, high: 86.3 },
+   			{ x:2011, low: 65.8, high: 87.1 },
+   			{ x:2012, low: 69.6, high: 87.9 }
 		  ]
 		}
 	];
 
-	function disparityData(arr){
+	function disparityData(arr){ //the unfinished function
 		var someData = arr;
+		console.log("FUnction talking here:")
 		console.log(someData[0].name);
 	}
 
@@ -102,19 +105,25 @@ $(document).ready(function() {
 	(
 		{
 
+			title: {
+				text: 'Disparities'
+			},
+
 	    chart:{
-	      renderTo: 'chart_container'
+	      renderTo: 'chart_container',
 	    },
 
 	    plotOptions: {
 				series:{
-					lineWidth:0
+					lineWidth: 0,
+					marker: {
+						radius:10, 
+						symbol: 'circle'
+					}
 				},
 
 				columnrange: {
-					series: {
-						lineWidth:1
-					}
+					pointWidth: 1,
 				}	
 			}, 
 
@@ -122,19 +131,54 @@ $(document).ready(function() {
 	    
 		}/*,
 		function(chart){
-			chart.renderer.path(['M', 200, 30, 'L', 100, 100]).attr({'stroke-width': 2, stroke: 'blue'}).add();
+			chart.renderer.path(
+				['M', 200, 30, 'L', 100, 100]
+			).attr(
+				{'stroke-width': 2, stroke: 'blue'}
+			).add();
 		}*/
 	);
 
-	//for to inspect the objects
-	console.log(myData);
-
-	var dataSetBest = chart.options.series[0].data;
-	var dataSetWorst = chart.options.series[1].data;
-	
-	console.log('drilling down, see?');
-	console.log(dataSetBest);
-	console.log(dataSetBest[0]);
-	console.log(dataSetBest[0].x);
+	console.log(chart); 
+	console.log(chart.series[0]); 
+	console.log(chart.series[0].data); 
+	console.log(chart.series[0].data[0]); 
+	console.log(chart.series[0].data[0].population); //White only, not Hispanic or Latino
 
 });
+
+
+//(the array of series-arrays is the value of the series property!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
