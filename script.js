@@ -7,26 +7,8 @@
 
 $(document).ready(function() {
 
-	/*you could declare some variables here to hold data
-	 then call those in places where hard coded below
-	 you can see that you figured out how to access objects
-	*/
-var chart = new Highcharts.Chart
-	(
-		{
+var myData = [
 
-	    chart: {
-	        renderTo: 'chart_container'
-	    },
-
-	    plotOptions: {
-				series: {
-					lineWidth:0
-				}
-			}, 
-
-	    series: 
-	    [
 	    	{
 	        name: 'Best',
 	        data: 
@@ -98,7 +80,25 @@ var chart = new Highcharts.Chart
 	    			}
 	    		]
 	    	}
-	    ]
+	    ];
+
+
+var chart = new Highcharts.Chart
+	(
+		{
+
+	    chart: {
+	        renderTo: 'chart_container'
+	    },
+
+	    plotOptions: {
+				series: {
+					lineWidth:0
+				}
+			}, 
+
+	    series: myData
+	    
 		}/*, 
 
 		this will create a random line, but will need access to chart object 
