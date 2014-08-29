@@ -97,6 +97,17 @@ $(document).ready(function() {
     		]
     	}
     ]
+	}, 
+
+	function(chart){
+		chart.renderer.path(['M', 0, 0, 'L', 100, 100, 200, 50, 300, 100])
+            .attr({
+                'stroke-width': 2,
+                stroke: 'red'
+            })
+            .add();
+
+
 	});
 
 	//and now some jQuerying about
