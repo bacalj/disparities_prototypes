@@ -4,6 +4,7 @@ $(document).ready(function() {
 	[
 
 		{
+			type:'spline',
 		  name: 'Best',
 		  data: 
 		  [
@@ -40,6 +41,7 @@ $(document).ready(function() {
 		}, 
 
 		{
+			type: 'spline',
 		  name: 'Worst',
 		  data:
 		  [
@@ -73,9 +75,28 @@ $(document).ready(function() {
 		      population:'Hispanic or Latino'
 		    }
 		  ]
+		},
+
+		{
+			type: 'columnrange',
+		  name: 'Disparities',
+		  data:
+		  [
+   			{ x:2008, low: 60, high: 90 },
+   			{ x:2009, low: 50, high: 80 },
+   			{ x:2010, low: 60, high: 70 },
+   			{ x:2011, low: 50, high: 90 },
+   			{ x:2012, low: 50, high: 90 }
+		  ]
 		}
 	];
 
+	function disparityData(arr){
+		var someData = arr;
+		console.log(someData[0].name);
+	}
+
+	disparityData(myData);
 
 	var chart = new Highcharts.Chart
 	(
@@ -88,7 +109,13 @@ $(document).ready(function() {
 	    plotOptions: {
 				series:{
 					lineWidth:0
-				}
+				},
+
+				columnrange: {
+					series: {
+						lineWidth:1
+					}
+				}	
 			}, 
 
 	    series: myData
