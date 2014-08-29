@@ -13,6 +13,12 @@ $(document).ready(function() {
         renderTo: 'chart_container'
     },
 
+    plotOptions: {
+			series: {
+				lineWidth:0
+			}
+		}, 
+
     series: 
     [
     	{
@@ -88,4 +94,5 @@ $(document).ready(function() {
     	}
     ]
 	});
+
 });
