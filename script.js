@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var myData = 
+	var myData = 
 	[
 
 		{
@@ -93,19 +93,15 @@ var myData =
 
 	    series: myData
 	    
-		}/*, 
-
-		this will create a random line, but will need access to chart object 
-		OR
-		do another graph column
-
-
+		}/*,
 		function(chart){
 			chart.renderer.path(['M', 200, 30, 'L', 100, 100]).attr({'stroke-width': 2, stroke: 'blue'}).add();
 		}*/
 	);
 
-	//and now some jQuerying about
+	//for to inspect the objects
+	console.log(myData);
+
 	var dataSetBest = chart.options.series[0].data;
 	var dataSetWorst = chart.options.series[1].data;
 	
