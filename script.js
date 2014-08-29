@@ -7,6 +7,10 @@
 
 $(document).ready(function() {
 
+	/*you could declare some variables here to hold data
+	 then call those in places where hard coded below
+	 you can see that you figured out how to access objects
+	*/
 	var chart = new Highcharts.Chart({
 
     chart: {
@@ -94,5 +98,14 @@ $(document).ready(function() {
     	}
     ]
 	});
+
+	//and now some jQuerying about
+	var dataSetBest = chart.options.series[0].data;
+	var dataSetWorst = chart.options.series[1].data;
+	
+	console.log('drilling down, see?');
+	console.log(dataSetBest);
+	console.log(dataSetBest[0]);
+	console.log(dataSetBest[0].population);
 
 });
