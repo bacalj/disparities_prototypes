@@ -13,27 +13,79 @@ $(document).ready(function() {
         renderTo: 'chart_container'
     },
 
-    tooltip: {
-        formatter: function () {
-            return 'special nice:  <br>' + this.point.foo + '<br>' + this.point.blug;
-        }
-    },
+    series: 
+    [
+    	{
+        name: 'Best',
+        data: 
+        [
+        	{
+            y: 87.5,
+            x: '2008',
+            population:'White only, not Hispanic or Latino'
+        	},
 
-    series: [{
-        name: 'Ya',
-        data: [{
-            y: 3,
-            foo: 'gorf gorf',
-            blug:'snah'
-        }, {
-            y: 7,
-            foo: 'fligiity',
-            blug: 'gork'
-        }, {
-            y: 1,
-            foo: 'shib',
-            blug: 'kroop'
-        }]
-    }]
+        	{
+            y: 86.8,
+            x: '2009',
+            population: 'White only, not Hispanic or Latino'
+        	},
+
+        	{
+            y: 86.3,
+            x: '2010',
+            population: 'White only, not Hispanic or Latino'
+        	},
+
+        	{
+            y: 87.1,
+            x: '2011',
+            population: 'White only, not Hispanic or Latino'
+        	},
+
+        	{
+            y: 87.9,
+            x: '2012',
+            population: 'Native Hawaiian or Other Pacific Islander'
+        	}
+        ]
+    	}, 
+
+    	{
+    		name: 'Worst',
+    		data:
+    		[
+    			{
+    				y: 66.7,
+            x: '2008',
+            population:'Hispanic or Latino'
+    			},
+
+    			{
+    				y: 67.1,
+            x: '2009',
+            population:'Hispanic or Latino'
+    			},
+
+    			{
+    				y: 56.0,
+            x: '2010',
+            population:'American Indian or Alaska Native'
+    			},
+
+    			{
+    				y: 65.8,
+            x: '2011',
+            population:'American Indian or Alaska Native'
+    			},
+
+    			{
+    				y: 69.6,
+            x: '2012',
+            population:'Hispanic or Latino'
+    			}
+    		]
+    	}
+    ]
 	});
 });
