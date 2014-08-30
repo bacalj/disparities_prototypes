@@ -116,16 +116,13 @@ $(document).ready(function() {
 				series:{
 					lineWidth: 0,
 					marker: {
-						radius:10, 
+						radius:6, 
 						symbol: 'circle'
 					}
 				},
 
 				columnrange: {
 					pointWidth: 1,
-
-
-
 				}	
 			}, 
 
@@ -147,7 +144,8 @@ $(document).ready(function() {
 	console.log(chart.series[0].data[0]); 
 	console.log(chart.series[0].data[0].population); //White only, not Hispanic or Latino
 
-});
+	}
+);
 
 
 //(the array of series-arrays is the value of the series property!!!
