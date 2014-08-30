@@ -138,11 +138,12 @@ $(document).ready(function() {
 		}*/
 	);
 
+
 	console.log(chart); 
-	console.log(chart.series[0]); 
-	console.log(chart.series[0].data); 
-	console.log(chart.series[0].data[0]); 
-	console.log(chart.series[0].data[0].population); //White only, not Hispanic or Latino
+	console.log(chart.series[2]); 
+	console.log(chart.series[2].data); 
+	console.log(chart.series[2].data[0]); 
+	console.log(chart.series[2].data[0].population); //White only, not Hispanic or Latino
 
 	}
 );
