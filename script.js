@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var myData = 
+	var myData = //could be called "mySeriesesArray"!!!
 	[
 		{
 			type: 'columnrange',
@@ -16,7 +16,8 @@ $(document).ready(function() {
    			{ x:2012, low: 69.6, high: 87.9 }
 		  ]
 		},
-
+      //at the moment type and name attributes being set in data, but 
+      //later you should make a function that sets myData[0].type to 'columnrange' etc.
 		{
 			type:'spline',
 		  name: 'Best',
@@ -145,6 +146,10 @@ $(document).ready(function() {
 	console.log(chart.series[2].data[0]); 
 	console.log(chart.series[2].data[0].population); //White only, not Hispanic or Latino
 
+	//example of how you can set attributes of series objects...so you can start w 'raw' data...
+	console.log(myData[0].type);
+	myData[0].type = 'woofity woofity';
+	console.log(myData[0].type);
 	}
 );
 
