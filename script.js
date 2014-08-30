@@ -2,6 +2,20 @@ $(document).ready(function() {
 
 	var myData = 
 	[
+		{
+			type: 'columnrange',
+		  name: 'Disparities',
+		  zIndex:0,
+		  pointPlacement: -.01,
+		  data:
+		  [
+   			{ x:2008, low: 66.7, high: 87.5}, //this is temporary - hard coded in for testing alignment
+   			{ x:2009, low: 67.1, high: 86.8 }, //working on a function below to pull necessary data from object
+   			{ x:2010, low: 56, high: 86.3 },
+   			{ x:2011, low: 65.8, high: 87.1 },
+   			{ x:2012, low: 69.6, high: 87.9 }
+		  ]
+		},
 
 		{
 			type:'spline',
@@ -75,21 +89,6 @@ $(document).ready(function() {
 		      population:'Hispanic or Latino'
 		    }
 		  ]
-		},
-
-		{
-			type: 'columnrange',
-		  name: 'Disparities',
-		  pointPadding: 0.3,
-      
-		  data:
-		  [
-   			{ x:2008, low: 66.7, high: 87.5}, //this is temporary - hard coded in for testing alignment
-   			{ x:2009, low: 67.1, high: 86.8 }, //working on a function below to pull necessary data from object
-   			{ x:2010, low: 56, high: 86.3 },
-   			{ x:2011, low: 65.8, high: 87.1 },
-   			{ x:2012, low: 69.6, high: 87.9 }
-		  ]
 		}
 	];
 
@@ -124,6 +123,9 @@ $(document).ready(function() {
 
 				columnrange: {
 					pointWidth: 1,
+
+
+
 				}	
 			}, 
 
