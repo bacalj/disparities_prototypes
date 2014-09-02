@@ -1,7 +1,68 @@
+// JSON object below includes: 
+// Wave data table, where pgid is 3, pid not empty, objective is AHS-1.1
+// Disparities data table, where objective is AHS-1.1
+// This is the series(es) array, which gets called into the value of chart.series 
+// series[0] is the disparities data
+// series[1] is the WAVE table data, where pgid is 3, pid is not empty, objective is ahs-1.1, 
+// series[1].
+
+//GAAAAAh ok for now I think you should create the perfect JSON object (basically already done)
+// then step 1 is make sure you can call that object into the series array, 
+// and push in the additional highcharts-needed attributes to each series object, like "name" and "type"
+// THEN get the chart fully functioning
+// THEN, if time, work on a refactor that can pull the min/max out of the WAVE rows
+
+ 
 [
-	[66.7, 87.5],
-  [67.1, 87.0],
-  [65.0, 86.3],
-  [65.8, 87.1],
-  [69.6, 87.9]
+	{
+		name: 'Disparities',
+		data: 
+		[
+		  { 
+		   	x:2008, 
+		   	low: 66.7, 
+		   	high: 87.5,
+		   	details: 'blah blah blah'
+		  }, 
+
+		  { 
+				x:2009, 
+				low: 67.1, 
+				high: 86.8,
+				details: 'blah blah blah'
+			}, 
+
+		  { 
+		   	x:2010, 
+		   	low: 56, 	 
+		   	high: 86.3,
+		   	details: 'blah blah blah' 
+		  },
+
+		  { 
+		   	x:2011, 
+		   	low: 65.8, 
+		   	high: 87.1,
+		   	details: 'blah blah blah'
+		  },
+
+		  { 
+		   	x:2012, 
+		   	low: 69.6, 
+		   	high: 87.9,
+		   	details: 'blah blah blah'
+		  }
+		]
+	}, 
+
+	{
+		name: 'Best'
+		data: ''
+
+	},
+
+	{
+
+	}
 ]
+
