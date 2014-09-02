@@ -4,23 +4,55 @@ $(document).ready(function() {
 	[
 		{
 			type: 'columnrange',
-		  name: 'Disparities',
+		  name: 'Summary measures of health disparities by Race/Ethnicity',
 		  zIndex:0,
 		  pointPlacement:-0.009,
 		  data:
 		  [
-   			{ x:2008, low: 66.7, high: 87.5}, //this is temporary - hard coded in for testing alignment
-   			{ x:2009, low: 67.1, high: 86.8 }, //working on a function below to pull necessary data from object
-   			{ x:2010, low: 56, 	 high: 86.3 },
-   			{ x:2011, low: 65.8, high: 87.1 },
-   			{ x:2012, low: 69.6, high: 87.9 }
+   			{ 
+   				x:2008, 
+   				low: 66.7, 
+   				high: 87.5, 
+   				//I had to remove some markup from this text - markup is currently generated from access database, should refactor I think...
+   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.5&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 66.7&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 20.8.</li><li>The best group rate was 1.311 times the worst group rate.</li><li>The best group rate was 1.122 times the average rate for all worse-off groups, 78&#37;.</li></ul>'
+   			}, 
+
+   			{ 
+   				x:2009, 
+   				low: 67.1, 
+   				high: 86.8, 
+   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.8&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 67.1&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 19.7.</li><li>The best group rate was 1.293 times the worst group rate.</li><li>The best group rate was 1.146 times the average rate for all worse-off groups, 75.8&#37;.</li></ul>'
+   			}, 
+
+   			{ 
+   				x:2010, 
+   				low: 56, 	 
+   				high: 86.3, 
+   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.3&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 56&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 30.3.</li><li>The best group rate was 1.542 times the worst group rate.</li><li>The best group rate was 1.161 times the average rate for all worse-off groups, 74.3&#37;.</li></ul>'
+   			},
+
+   			{ 
+   				x:2011, 
+   				low: 65.8, 
+   				high: 87.1, 
+   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity/b><ul><li>The best group rate for this objective, 87.1&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 65.8&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 21.3.</li><li>The best group rate was 1.324 times the worst group rate.</li><li>The best group rate was 1.134 times the average rate for all worse-off groups, 76.8&#37;.</li></ul>'
+   			},
+
+   			{ 
+   				x:2012, 
+   				low: 69.6, 
+   				high: 87.9, 
+   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.9&#37;, was attained by the Native Hawaiian or Other Pacific Islander only population.</li><li>The worst group rate for this objective, 69.6&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 18.4.</li><li>The best group rate was 1.264 times the worst group rate.</li><li>The best group rate was 1.097 times the average rate for all worse-off groups, 80.1&#37;.</li></ul>'
+   			}, 
 		  ]
 		},
-      //at the moment type and name attributes being set in data, but 
-      //later you should make a function that sets myData[0].type to 'columnrange' etc.
+    
 		{
 			type:'spline',
 		  name: 'Best',
+		   marker: {
+		  	fillColor:'#0980AF'
+		  }, 
 		  data: 
 		  [
 		   	{
@@ -58,7 +90,10 @@ $(document).ready(function() {
 		{
 			type: 'spline',
 		  name: 'Worst',
-		  data:
+		  marker: {
+		  	fillColor: "#FF2215"
+		  },
+		  data: 
 		  [
 		    {
 		    	y: 66.7,
@@ -98,12 +133,35 @@ $(document).ready(function() {
 		{
 
 			title: {
-				text: 'Disparities'
+				text: 'Disparities overview by Race/Ethnicity'
 			},
+
+			subtitle: {
+					text: 'Persons with medical insurance (percent, <65 years)'
+				},
 
 	    chart:{
 	      renderTo: 'chart_container',
 	    },
+
+	    legend: {
+	    	enabled: false
+	    },
+
+	    tooltip: {
+	    	useHTML: true,
+	    	style: {
+	    		fontSize: '10px'
+	    	}
+	    },
+
+	    yAxis: {
+					min: 50,
+					max: 100,
+					title: {
+						text: '% (percent)'
+					}
+			},
 
 	    plotOptions: {
 				series:{
@@ -115,38 +173,39 @@ $(document).ready(function() {
 				},
 
 				columnrange: {
-					pointWidth: 1,
+					pointWidth: 1, 
+					color: 'black',
+					tooltip: {
+						pointFormat: '<span>{point.summaryText}<br</span>'
+					}
+				}, 
+
+				spline: {
+					dataLabels: {
+						align: 'center',
+						enabled: true,
+						formatter: function(){
+							if (this.series.name == 'Best') {
+								var label = this.point.population;
+								return this.y + label;
+							}
+
+							else if (this.series.name == 'Worst') {
+								var label = this.point.population;
+								return this.y + '%<br>' + label;
+							}
+						}
+					}
 				}	
 			}, 
 
 	    series: myData
 	    
-		}/*,
-		function(chart){
-			chart.renderer.path(
-				['M', 200, 30, 'L', 100, 100]
-			).attr(
-				{'stroke-width': 2, stroke: 'blue'}
-			).add();
-		}*/
+		}
 	);
+});
 
 
-	console.log(chart); 
-	console.log(chart.series[2]); 
-	console.log(chart.series[2].data); 
-	console.log(chart.series[2].data[0]); 
-	console.log(chart.series[2].data[0].population); //White only, not Hispanic or Latino
-
-	//example of how you can set attributes of series objects...so you can start w 'raw' data...
-	console.log(myData[0].type);
-	myData[0].type = 'woofity woofity';
-	console.log(myData[0].type);
-	}
-);
-
-
-//(the array of series-arrays is the value of the series property!!!
 
 
 

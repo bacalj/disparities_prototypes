@@ -12,3 +12,13 @@
   border-radius: 7px;
   padding:10px;
 }
+
+.highcharts-tooltip span {
+  overflow:auto;
+  white-space:normal;
+  width:400px;
+}
+
+.highcharts-data-labels {
+	color: green;
+}
