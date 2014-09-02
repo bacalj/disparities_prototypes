@@ -93,14 +93,6 @@ $(document).ready(function() {
 		}
 	];
 
-	/*function disparityData(arr){ //the unfinished function
-		var someData = arr;
-		console.log("FUnction talking here:")
-		console.log(someData[0].name);
-	}
-
-	disparityData(myData); */
-
 	var chart = new Highcharts.Chart
 	(
 		{
