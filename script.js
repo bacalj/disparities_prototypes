@@ -142,6 +142,7 @@ $(document).ready(function() {
 
 	    chart:{
 	      renderTo: 'chart_container',
+	      width: 600
 	    },
 
 	    legend: {
@@ -182,17 +183,22 @@ $(document).ready(function() {
 
 				spline: {
 					dataLabels: {
-						align: 'center',
+						useHTML: true,
+						style: {
+							textAlign: 'center',
+							//width: '80px',
+							fontSize: '9px'
+						},
 						enabled: true,
 						formatter: function(){
 							if (this.series.name == 'Best') {
-								var label = this.point.population;
-								return this.y + label;
+								var label = '<div class="popLabel best">' + this.y + '<br>'+ this.point.population + '</div>';
+								return label;
 							}
 
 							else if (this.series.name == 'Worst') {
-								var label = this.point.population;
-								return this.y + '%<br>' + label;
+								var label = '<div class="popLabel worst">' + this.y + '<br>'+ this.point.population + '</div>';
+								return label;
 							}
 						}
 					}

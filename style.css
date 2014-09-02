@@ -8,17 +8,29 @@
 
 #gradient-wrap {
   border:5px solid #d6d6d6;
-  width:600px;
+  width:700px;
   border-radius: 7px;
   padding:10px;
 }
 
 .highcharts-tooltip span {
   overflow:auto;
-  white-space:normal;
+  white-space: normal;
   width:400px;
 }
 
-.highcharts-data-labels {
-	color: green;
+div.popLabel {
+	width: 83px;
+	height:40px;
+  white-space: normal;
+  text-align: center;
+  position: relative;
+}
+
+div.popLabel.worst {
+	top:53px;
+}
+
+div.popLabel.best {
+	
 }
