@@ -1,10 +1,58 @@
 #page-wrap {
 	width:960px;
-	border:2px dotted silver;
+	padding:5px;
+	font-family: Helvetica;
 }
 
-#chart-wrap {
-	border: 1px dotted silver;
+#title-wrap {
+	height: 120px;
+}
+
+#icon {
+	background-color: #0980AF;
+	border-radius: 50px;
+	width:40px;
+	height:40px;
+	float:left;
+	margin-top: 15px;
+	padding:5px;
+}
+#chart-wrap, #title-wrap {
+	width:702px;
+	//border:1px dotted red;
+	margin: 0 auto;
+}
+
+#title-area {
+	//border:1px dotted green;
+	width:600px;
+	float:left;
+	padding-left:13px;
+}
+
+#title-text {
+	color: #0980AF;
+	font-weight: bold;
+}
+
+#subtitle-text{
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#sub-subtitle-text {
+	font-size: 10px;
+}
+
+.subheading {
+	//width:190px;
+	display: inline-block;
+	font-size: 12px;
+	padding-right: 40px;
+}
+
+.subheading span {
+	font-weight: bold;
 }
 
 .highcharts-container {
@@ -43,4 +91,13 @@ div.popLabel.worst {
 
 div.popLabel.best {
 	
+}
+
+#footnote {
+	font-size: 11px;
+	padding-top: 20px;
+}
+
+div {
+	//border: 1px dotted blue;
 }

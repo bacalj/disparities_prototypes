@@ -132,17 +132,24 @@ $(document).ready(function() {
 		{
 
 			title: {
-				text: 'Disparities overview by Race/Ethnicity'
+				text: 'Disparities overview by Race/Ethnicity',
+				align: 'left',
+				style: {
+					display: 'none'
+				}
 			},
 
 			subtitle: {
-					text: 'Persons with medical insurance (percent, <65 years)'
+					text: 'Persons with medical insurance (percent, <65 years)',
+					align: 'left',
+					style: {
+						display: 'none'
+					}
 				},
 
 	    chart:{
 	      renderTo: 'overview-container',
 	      width: 700,
-	      height:450
 	    },
 
 	    legend: {
@@ -157,11 +164,27 @@ $(document).ready(function() {
 	    	}
 	    },
 
+	    xAxis: {
+	    	//categories: ['2008', '2009', '2010', '2011', '2012'], 
+	    	labels: {
+	    		useHTML: true,
+	    		formatter: function() {
+	    			console.log(this.value);
+	    			var link = '<a href="details_chart_' + this.value + '.html">' + this.value + '</a>';
+	    			console.log(link);
+            return link;
+	    		}
+	    	}
+	    },
+
 	    yAxis: {
 					min: 50,
 					max: 100,
 					title: {
-						text: '% (percent)'
+						text: '% (percent)', 
+						style: {
+							color: '#0980AF'
+						}
 					}
 			},
 
@@ -205,11 +228,15 @@ $(document).ready(function() {
 					}
 				}	
 			}, 
+	    series: myData,
+		},
 
-	    series: myData
-	    
-		}
+		function (chart) {
+			//chart.renderer.text('some text', 10, 70)
+      //.add();
+    }
 	);
+
 });
 
 
