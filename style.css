@@ -1,22 +1,28 @@
-#page-wrap {}
-
-#page {
-  width:960px;
-  margin:0 auto;
-  padding: 20px 19px 20px 19px;
+#page-wrap {
+	width:960px;
+	border:2px dotted silver;
 }
 
-#gradient-wrap {
-  border:5px solid #d6d6d6;
-  width:700px;
-  border-radius: 7px;
-  padding:10px;
+#chart-wrap {
+	border: 1px dotted silver;
+}
+
+.highcharts-container {
+	margin: 0 auto;
+}
+
+.highcharts-tooltip {
+	background-color: #ffffff;
+	z-index: 6;
+	width:400px;
 }
 
 .highcharts-tooltip span {
   overflow:auto;
   white-space: normal;
   width:400px;
+  background-color: #ffffff;
+  z-index: 7;
 }
 
 div.popLabel {
@@ -25,6 +31,10 @@ div.popLabel {
   white-space: normal;
   text-align: center;
   position: relative;
+}
+
+div.tooltip-div {
+	background-color: #ffffff;
 }
 
 div.popLabel.worst {

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var myData = //could be called "mySeriesesArray"!!!
+	var myData =
 	[
 		{
 			type: 'columnrange',
@@ -13,7 +13,6 @@ $(document).ready(function() {
    				x:2008, 
    				low: 66.7, 
    				high: 87.5, 
-   				//I had to remove some markup from this text - markup is currently generated from access database, should refactor I think...
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.5&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 66.7&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 20.8.</li><li>The best group rate was 1.311 times the worst group rate.</li><li>The best group rate was 1.122 times the average rate for all worse-off groups, 78&#37;.</li></ul>'
    			}, 
 
@@ -141,8 +140,9 @@ $(document).ready(function() {
 				},
 
 	    chart:{
-	      renderTo: 'chart_container',
-	      width: 600
+	      renderTo: 'overview-container',
+	      width: 700,
+	      height:450
 	    },
 
 	    legend: {
@@ -152,7 +152,8 @@ $(document).ready(function() {
 	    tooltip: {
 	    	useHTML: true,
 	    	style: {
-	    		fontSize: '10px'
+	    		fontSize: '10px',
+	    		backgroundColor: 'red'
 	    	}
 	    },
 
@@ -192,12 +193,12 @@ $(document).ready(function() {
 						enabled: true,
 						formatter: function(){
 							if (this.series.name == 'Best') {
-								var label = '<div class="popLabel best">' + this.y + '<br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel best">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 
 							else if (this.series.name == 'Worst') {
-								var label = '<div class="popLabel worst">' + this.y + '<br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel worst">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 						}
