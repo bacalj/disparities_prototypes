@@ -90,7 +90,7 @@ $(document).ready(function() {
 			type: 'spline',
 		  name: 'Worst',
 		  marker: {
-		  	fillColor: "#FF2215"
+		  	fillColor: "#000000"
 		  },
 		  data: 
 		  [
@@ -192,14 +192,14 @@ $(document).ready(function() {
 				series:{
 					lineWidth: 0,
 					marker: {
-						radius:6, 
+						radius:0, 
 						symbol: 'circle'
 					}
 				},
 
 				columnrange: {
-					pointWidth: 1, 
-					color: 'black',
+					pointWidth: 50, 
+					color: '#9b9b9b',
 					tooltip: {
 						pointFormat: '<span>{point.summaryText}<br</span>'
 					}

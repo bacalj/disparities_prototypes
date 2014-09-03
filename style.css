@@ -1,11 +1,18 @@
-#page-wrap {
-	width:960px;
-	padding:5px;
-	font-family: Helvetica;
+/* layout and global */
+body {
+	font-family: Helvetica
 }
 
+#page-wrap {
+	width:960px;
+	margin: 0 auto;
+}
+
+/* title area */ 
 #title-wrap {
-	height: 120px;
+	border:1px dotted white;
+	border-bottom: 1px solid silver;
+	margin-bottom: 8px;
 }
 
 #icon {
@@ -16,18 +23,11 @@
 	float:left;
 	margin-top: 15px;
 	padding:5px;
-}
-#chart-wrap, #title-wrap {
-	width:702px;
-	//border:1px dotted red;
-	margin: 0 auto;
+	margin-right: 10px;
 }
 
-#title-area {
-	//border:1px dotted green;
-	width:600px;
-	float:left;
-	padding-left:13px;
+#title-text-area {
+	padding-left: 10px;
 }
 
 #title-text {
@@ -44,19 +44,26 @@
 	font-size: 10px;
 }
 
-.subheading {
-	//width:190px;
+/* additional subheadings above chart */
+#chart-subheadings-area {
+	margin-bottom: 30px;
+}
+
+#chart-subheadings-area div {
 	display: inline-block;
+	padding-right: 45px;
 	font-size: 12px;
-	padding-right: 40px;
 }
 
 .subheading span {
 	font-weight: bold;
 }
 
-.highcharts-container {
+
+/* within the chart */
+#overview-container {
 	margin: 0 auto;
+	width:700px;
 }
 
 .highcharts-tooltip {
@@ -79,25 +86,69 @@ div.popLabel {
   white-space: normal;
   text-align: center;
   position: relative;
+  font-weight: bold;
+}
+
+div.popLabel.worst {
+	top:47px;
+	color: #B7404A;
+}
+
+div.popLabel.best {
+	color: #0980AF; //blue
+	padding-bottom: 3px;
+	height:45px;
+}
+
+/* footnote area */ 
+#footnote-wrap {
+	font-size: 11px;
+	padding-top: 40px;
+}
+
+p#data-source {
+	font-size: 10px;
+	padding-bottom: 20px;
+}
+
+#data-source span {
+	font-weight: bold;
+}
+
+#footnotes-title {
+	width:300px;
+	font-size: 16px;
+	font-weight: bold;
+	color:#528171; //green
+}
+
+#toggler {
+	margin-left: 30px;
+}
+
+/* junk pile to salvage
+
+
+.highcharts-container {
+	margin: 0 auto;
 }
 
 div.tooltip-div {
 	background-color: #ffffff;
 }
 
-div.popLabel.worst {
-	top:53px;
-}
 
-div.popLabel.best {
-	
-}
-
-#footnote {
+#footnote, #footnotes {
 	font-size: 11px;
 	padding-top: 20px;
 }
 
-div {
-	//border: 1px dotted blue;
+#footnotes-wrap span {
+	font-weight: bold;
+	width:150px;
+	display: inline-block;
 }
+
+
+
+*/
