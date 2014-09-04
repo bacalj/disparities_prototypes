@@ -236,6 +236,11 @@ $(document).ready(function() {
       //.add();
     }
 	);
+	$('#toggler').click(function(){
+		var buttonText = $('#footnotes-text').is(':visible') ? 'Show Footnotes' : 'Hide Footnotes';
+		$('#toggler').text(buttonText);
+		$('#footnotes-text').slideToggle(300);
+	});
 
 });
 

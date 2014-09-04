@@ -26,12 +26,35 @@ body {
 	margin-right: 10px;
 }
 
+#icon-details {
+	background-color: #EF9017;
+	border-radius: 50px;
+	width:40px;
+	height:40px;
+	float:left;
+	margin-top: 15px;
+	padding:5px;
+	margin-right: 10px;
+}
+
+/*
+.blue-text {color:#0980AF;}
+.orange-text {color: #EF9017;}
+.blue-background {background-color:#0980AF;}
+.orange-background {background-color: #EF9017;}
+*/
+
 #title-text-area {
 	padding-left: 10px;
 }
 
 #title-text {
 	color: #0980AF;
+	font-weight: bold;
+}
+
+#title-text-details {
+	color:#EF9017;
 	font-weight: bold;
 }
 
