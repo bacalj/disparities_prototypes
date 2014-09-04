@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 	    chart:{
 	      renderTo: 'overview-container',
-	      width: 700,
+	      width: 800
 	    },
 
 	    legend: {
