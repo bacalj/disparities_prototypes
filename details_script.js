@@ -15,7 +15,7 @@ $(document).ready(function() {
 		},
 
 		xAxis:  {
-			//categories: ['2012'],
+			//categories: ['White only, not Hispanic or Latino', 'Bob'],
 			labels: {
 				enabled:false
 			},
@@ -25,6 +25,11 @@ $(document).ready(function() {
 			tickLength: 0
 		}, 	
 
+		plotOptions: {
+			column: {
+				colorByPoint: true
+			}
+		},
 	 	/*scrollbar: {
       enabled: true
 	   },
@@ -49,6 +54,21 @@ $(document).ready(function() {
 
 		series: 
 		[
+			{
+				name: 'Disparities details',
+				type: 'column',
+				data: [10, 30, 50, 70, 90]
+			}, 
+
+			{
+				name: 'errory',
+				type: 'errorbar',
+				data: [[5,13], [26,37], [43,56], [64,73],[82,92]]
+			}
+		]
+
+	/*[
+		  //below works, but using above for error bar convenience 
 		  {
 		  	type: 'column',
 		  	name: 'White only, not Hispanic or Latino',
@@ -70,21 +90,22 @@ $(document).ready(function() {
 		  {
 		  	type: 'column',
 		  	name: 'Black or African American only, not Hispanic or Latino',
-		  	data: [96.3]
+		  	data: [86.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'Hispanic or Latino',
-		  	data: [56.3]
+		  	data: [86.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'American Indian or Alaska Native Only',
-		  	data: [36.3]
+		  	data: [86.3]
 		  }
-		]
+		  //commented out above is a working version where each bar is a serie object
+		]*/
 	});
 
 	$('#toggler').click(function(){
