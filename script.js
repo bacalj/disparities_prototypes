@@ -144,6 +144,10 @@ $(document).ready(function() {
 				}
 			},
 
+			credits: {
+            enabled: false
+       },
+
 			subtitle: {
 					text: 'Persons with medical insurance (percent, <65 years)',
 					align: 'left',

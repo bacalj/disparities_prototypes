@@ -5,8 +5,13 @@ $(document).ready(function() {
 		chart: {
 			type: 'column',
 			width:800,
+			height:350,
 			panning: true
 		},
+
+		credits: {
+      enabled: false
+    },
 
 		title: {
 			style: {
@@ -14,8 +19,18 @@ $(document).ready(function() {
 			}
 		},
 
+		legend: {
+			enabled: false
+		},
+
+		yAxis: {
+			label: {
+				text: '% (percent)'
+			}
+		},
+
 		xAxis:  {
-			//categories: ['White only, not Hispanic or Latino', 'Bob'],
+			categories: ['Sal', 'Ned', 'Bob', 'Fred', 'Lou'],
 			labels: {
 				enabled:false
 			},
@@ -57,13 +72,25 @@ $(document).ready(function() {
 			{
 				name: 'Disparities details',
 				type: 'column',
-				data: [10, 30, 50, 70, 90]
+				data: [86.3, 84.8, 84.2, 82.9, 82.4, 79.4, 79.3, 75.6, 68.0, 56.0]
 			}, 
 
 			{
 				name: 'errory',
 				type: 'errorbar',
-				data: [[5,13], [26,37], [43,56], [64,73],[82,92]]
+				data: 
+				[
+					[85.7,86.9], 
+					[84.2,85.4], 
+					[82.0,86.5], 
+					[81.3, 84.5],
+					[81.8, 83.0],
+					[78.3, 80.4],
+					[78.2, 80.4],
+					[62.4, 88.8],
+					[66.7, 69.2],
+					[39.6, 72.3]
+				]
 			}
 		]
 
@@ -107,8 +134,7 @@ $(document).ready(function() {
 		  //commented out above is a working version where each bar is a serie object
 		]*/
 	});
-	
-	console.log(chart.series[0]);
+
 	$('#toggler').click(function(){
 		var buttonText = $('#footnotes-text').is(':visible') ? 'Show Footnotes' : 'Hide Footnotes';
 		$('#toggler').text(buttonText);
