@@ -34,7 +34,7 @@ p {
 	margin-bottom: 8px;
 }
 
-#icon {
+.icon {
 	background-color: #0980AF;
 	border-radius: 50px;
 	width:40px;
@@ -45,7 +45,7 @@ p {
 	margin-right: 10px;
 }
 
-#icon-details {
+.icon-details {
 	background-color: #EF9017;
 	border-radius: 50px;
 	width:40px;
@@ -54,6 +54,22 @@ p {
 	margin-top: 15px;
 	padding:5px;
 	margin-right: 10px;
+}
+
+.icon-3 {
+	background-color: #EF9017;
+	border-radius: 23px;
+	width:23px;
+	height:23px;
+	float:left;
+	margin-top: -7px;
+	padding:5px;
+	margin-right: 10px;
+	margin-left: -5px;
+}
+
+p#spotlight {
+	margin:5px 5px 5px 0px;
 }
 
 #icon-details-small {
@@ -237,6 +253,7 @@ table {
 	border-collapse: collapse;
 	margin-right: 20px;
 	margin-bottom: 20px;
+	clear:left;
 }
 
 td {
