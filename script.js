@@ -13,6 +13,7 @@ $(document).ready(function() {
    				x:2008, 
    				low: 66.7, 
    				high: 87.5, 
+   				color:'#aaaaaa',
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.5&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 66.7&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 20.8.</li><li>The best group rate was 1.311 times the worst group rate.</li><li>The best group rate was 1.122 times the average rate for all worse-off groups, 78&#37;.</li></ul>'
    			}, 
 
@@ -20,6 +21,7 @@ $(document).ready(function() {
    				x:2009, 
    				low: 67.1, 
    				high: 86.8, 
+   				color:'#aaaaaa',
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.8&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 67.1&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 19.7.</li><li>The best group rate was 1.293 times the worst group rate.</li><li>The best group rate was 1.146 times the average rate for all worse-off groups, 75.8&#37;.</li></ul>'
    			}, 
 
@@ -27,6 +29,7 @@ $(document).ready(function() {
    				x:2010, 
    				low: 56, 	 
    				high: 86.3, 
+   				color:'orange',
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.3&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 56&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 30.3.</li><li>The best group rate was 1.542 times the worst group rate.</li><li>The best group rate was 1.161 times the average rate for all worse-off groups, 74.3&#37;.</li></ul>'
    			},
 
@@ -34,13 +37,15 @@ $(document).ready(function() {
    				x:2011, 
    				low: 65.8, 
    				high: 87.1, 
+   				color:'#aaaaaa',
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity/b><ul><li>The best group rate for this objective, 87.1&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 65.8&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 21.3.</li><li>The best group rate was 1.324 times the worst group rate.</li><li>The best group rate was 1.134 times the average rate for all worse-off groups, 76.8&#37;.</li></ul>'
    			},
 
    			{ 
    				x:2012, 
    				low: 69.6, 
-   				high: 87.9, 
+   				high: 87.9,
+   				color:'#aaaaaa', 
    				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.9&#37;, was attained by the Native Hawaiian or Other Pacific Islander only population.</li><li>The worst group rate for this objective, 69.6&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 18.4.</li><li>The best group rate was 1.264 times the worst group rate.</li><li>The best group rate was 1.097 times the average rate for all worse-off groups, 80.1&#37;.</li></ul>'
    			}, 
 		  ]
@@ -152,6 +157,10 @@ $(document).ready(function() {
 	      width: 800
 	    },
 
+	    scrollbar: {
+      	enabled: true
+	    },
+
 	    legend: {
 	    	enabled: false
 	    },
@@ -175,6 +184,9 @@ $(document).ready(function() {
             return link;
 	    		}
 	    	}
+
+	    	//min:1, 
+	    	//max:3,
 	    },
 
 	    yAxis: {
@@ -198,6 +210,7 @@ $(document).ready(function() {
 				},
 
 				columnrange: {
+					colorByPoint: true,
 					pointWidth: 50, 
 					color: '#9b9b9b',
 					tooltip: {

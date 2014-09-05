@@ -107,7 +107,8 @@ $(document).ready(function() {
 		  //commented out above is a working version where each bar is a serie object
 		]*/
 	});
-
+	
+	console.log(chart.series[0]);
 	$('#toggler').click(function(){
 		var buttonText = $('#footnotes-text').is(':visible') ? 'Show Footnotes' : 'Hide Footnotes';
 		$('#toggler').text(buttonText);
