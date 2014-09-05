@@ -4,7 +4,8 @@ $(document).ready(function() {
 
 		chart: {
 			type: 'column',
-			width:800
+			width:800,
+			panning: true
 		},
 
 		title: {
@@ -14,21 +15,21 @@ $(document).ready(function() {
 		},
 
 		xAxis:  {
-			categories: ['2008', '2009', '2010', '2011', '2012'],
+			//categories: ['2012'],
 			labels: {
-				enabled:true
+				enabled:false
 			},
 
-			min:0, 
-			max:4,
+			//min:1, 
+			//max:1,
 			tickLength: 0
 		}, 	
 
-	 	scrollbar: {
+	 	/*scrollbar: {
       enabled: true
 	   },
 
-		/*rangeSelector: {
+		rangeSelector: {
 			enabled:true, 
 			buttons: 
 			[
@@ -51,37 +52,37 @@ $(document).ready(function() {
 		  {
 		  	type: 'column',
 		  	name: 'White only, not Hispanic or Latino',
-		  	data: [[86.3], [44.4], [89.4],[86.3], [54.4]]
+		  	data: [86.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: '2 or more races',
-		  	data: [[86.3], [54.4], [79.4],[76.3], [54.4]]
+		  	data: [86.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'Asian only',
-		  	data: [[86.3], [74.4], [29.4],[86.3], [94.4]]
+		  	data: [86.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'Black or African American only, not Hispanic or Latino',
-		  	data: [[96.3], [54.4], [79.4],[86.3], [58.4]]
+		  	data: [96.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'Hispanic or Latino',
-		  	data: [[56.3], [64.4], [69.4],[86.3], [74.4]]
+		  	data: [56.3]
 		  },
 
 		  {
 		  	type: 'column',
 		  	name: 'American Indian or Alaska Native Only',
-		  	data: [[36.3], [54.4], [83.4],[86.3], [44.4]]
+		  	data: [36.3]
 		  }
 		]
 	});

@@ -9,7 +9,8 @@
 	<script src="http://code.highcharts.com/stock/highcharts-more.js"></script>
 	<script type="text/javascript" src="details_script.js"></script>
 	<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
-	
+	<link rel="stylesheet" href="font-a/css/font-awesome.min.css">
+
 	<meta charset="utf-8"> 
 </head>
 
@@ -34,6 +35,33 @@
 			<div class='subheading'><span>2020 Target: </span> 100</div>
 			<div class='subheading'><span>Desired Direction: </span> Increase</div>
 		</div>
+    
+    <!--transport bar-->
+		<div class='transport-bar'>
+			<table class='transport-bar'><tbody><tr>
+				
+				<td class='transport-left'>
+					<i class="fa fa-caret-left fa-3x"></i><i class="fa fa-caret-left fa-3x"></i>
+					<div class='spacer'></div>
+					<i class="fa fa-caret-left fa-3x"></i>
+					<div class='spacer'></div>
+					<span class='year'></span>
+				</td>
+
+				<td class='transport-center'>
+					<i class="fa fa-circle fa-3x transport-center"> 2010 </i>
+				</td>
+
+				<td class='transport-right'>
+					<i class="fa fa-caret-right fa-3x"></i>
+					<div class='spacer'></div>
+					<i class="fa fa-caret-right fa-3x"></i><i class="fa fa-caret-right fa-3x"></i>
+					<div class='spacer'></div>
+				</td>
+
+			</tr></tbody></table>
+		</div>
+		
 
 		<!--Chart Area-->
 		<div id="chart-wrap">
