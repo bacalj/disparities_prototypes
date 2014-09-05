@@ -9,6 +9,11 @@ $(document).ready(function() {
 			panning: true
 		},
 
+		tooltip: {
+			enabled: true,
+			pointFormat: '{point.y}%'
+		},
+
 		credits: {
       enabled: false
     },
@@ -30,9 +35,24 @@ $(document).ready(function() {
 		},
 
 		xAxis:  {
-			categories: ['Sal', 'Ned', 'Bob', 'Fred', 'Lou'],
+			categories: [
+				'White only, not Hispanic or Latino	', 
+				'Not Hispanic or Latino', 
+				'2 or more races', 
+				'Asian only', 
+				'White only',
+				'Black or African-American only',
+				'Black or African-American only, not Hispanic or Latino',
+				'Native Hawaiian or Other Pacific Islander only',
+				'Hispanic or Latino',
+				'American Indian or Alaska Native only'
+			],
+
 			labels: {
-				enabled:false
+				enabled:true, 
+				style: {
+					fontSize:'9px'
+				}
 			},
 
 			//min:1, 

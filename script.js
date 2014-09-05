@@ -145,14 +145,14 @@ $(document).ready(function() {
 			},
 
 			credits: {
-            enabled: false
+        enabled: false
        },
 
 			subtitle: {
-					text: 'Persons with medical insurance (percent, <65 years)',
-					align: 'left',
-					style: {
-						display: 'none'
+				text: 'Persons with medical insurance (percent, <65 years)',
+				align: 'left',
+				style: {
+					display: 'none'
 					}
 				},
 
@@ -171,10 +171,10 @@ $(document).ready(function() {
 
 	    tooltip: {
 	    	useHTML: true,
-	    	style: {
-	    		fontSize: '10px',
-	    		backgroundColor: 'red'
-	    	}
+	    	//style: {
+	    	//	fontSize: '10px',
+	    	//	backgroundColor: 'red'
+	    	//}
 	    },
 
 	    xAxis: {
