@@ -4,55 +4,56 @@ $(document).ready(function() {
 	[
 		{
 			type: 'columnrange',
-		  name: 'Summary measures of health disparities by Race/Ethnicity',
+		  name: 'Summary measures of health disparities by Educational attainment &#8212; 2012',
 		  zIndex:0,
 		  pointPlacement:-0.009,
 		  data:
 		  [
    			{ 
    				x:2008, 
-   				low: 66.7, 
-   				high: 87.5, 
+   				low: 56.9, 
+   				high: 95.5, 
    				color:'#aaaaaa',
-   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.5&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 66.7&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 20.8.</li><li>The best group rate was 1.311 times the worst group rate.</li><li>The best group rate was 1.122 times the average rate for all worse-off groups, 78&#37;.</li></ul>'
+   				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2008</b><ul><li>The best group rate for this objective, 95.5&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 56.9&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 38.6.</li><li>The best group rate was 1.679 times the worst group rate.</li><li>The best group rate was 1.202 times the average rate for all worse-off groups, 79.5&#37;.</li></ul>'
    			}, 
 
    			{ 
    				x:2009, 
-   				low: 67.1, 
-   				high: 86.8, 
+   				low: 55.9, 
+   				high: 95.1, 
    				color:'#aaaaaa',
-   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.8&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 67.1&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 19.7.</li><li>The best group rate was 1.293 times the worst group rate.</li><li>The best group rate was 1.146 times the average rate for all worse-off groups, 75.8&#37;.</li></ul>'
+   				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2009</b><ul><li>The best group rate for this objective, 95.1&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 55.9&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 39.3.</li><li>The best group rate was 1.703 times the worst group rate.</li><li>The best group rate was 1.225 times the average rate for all worse-off groups, 77.6&#37;.</li></ul>'
    			}, 
 
    			{ 
    				x:2010, 
-   				low: 56, 	 
-   				high: 86.3, 
+   				low: 54.4, 	 
+   				high: 95.3, 
    				color:'orange',
-   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 86.3&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 56&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 30.3.</li><li>The best group rate was 1.542 times the worst group rate.</li><li>The best group rate was 1.161 times the average rate for all worse-off groups, 74.3&#37;.</li></ul>'
+   				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2010</b><ul><li>The best group rate for this objective, 95.3&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 54.4&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 40.9.</li><li>The best group rate was 1.751 times the worst group rate.</li><li>The best group rate was 1.244 times the average rate for all worse-off groups, 76.6&#37;.</li></ul>'
    			},
 
    			{ 
    				x:2011, 
-   				low: 65.8, 
-   				high: 87.1, 
+   				low: 57.5, 
+   				high: 95.2, 
    				color:'#aaaaaa',
-   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity/b><ul><li>The best group rate for this objective, 87.1&#37;, was attained by the White only, not Hispanic or Latino population.</li><li>The worst group rate for this objective, 65.8&#37;, was attained by the American Indian or Alaska Native only population.</li><li>The absolute (or range) difference between the best and worst group rates was 21.3.</li><li>The best group rate was 1.324 times the worst group rate.</li><li>The best group rate was 1.134 times the average rate for all worse-off groups, 76.8&#37;.</li></ul>'
+   				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2011</b><ul><li>The best group rate for this objective, 95.2&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 57.5&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 37.7.</li><li>The best group rate was 1.655 times the worst group rate.</li><li>The best group rate was 1.236 times the average rate for all worse-off groups, 77&#37;.</li></ul>'
    			},
 
    			{ 
    				x:2012, 
-   				low: 69.6, 
-   				high: 87.9,
+   				low: 56.3, 
+   				high: 95.0,
    				color:'#aaaaaa', 
-   				summaryText: '<b>Summary measures of health disparities by Race/Ethnicity</b><ul><li>The best group rate for this objective, 87.9&#37;, was attained by the Native Hawaiian or Other Pacific Islander only population.</li><li>The worst group rate for this objective, 69.6&#37;, was attained by the Hispanic or Latino population.</li><li>The absolute (or range) difference between the best and worst group rates was 18.4.</li><li>The best group rate was 1.264 times the worst group rate.</li><li>The best group rate was 1.097 times the average rate for all worse-off groups, 80.1&#37;.</li></ul>'
+   				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2012</b><ul><li>The best group rate for this objective, 95&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 56.3&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 38.7.</li><li>The best group rate was 1.687 times the worst group rate.</li><li>The best group rate was 1.234 times the average rate for all worse-off groups, 77&#37;.</li></ul>'
    			}, 
 		  ]
 		},
     
 		{
 			type:'spline',
+			enableMouseTracking: false,
 		  name: 'Best',
 		   marker: {
 		  	fillColor:'#0980AF'
@@ -60,73 +61,77 @@ $(document).ready(function() {
 		  data: 
 		  [
 		   	{
-		      y: 87.5,
+		      y: 95.5,
 		      x: '2008',
-		      population:'White only, not Hispanic or Latino'
+		      population:'Advanced degree'
 		    },
 
 		    {
-		      y: 86.8,
+		      y: 95.1,
 		      x: '2009',
-		      population: 'White only, not Hispanic or Latino'
+		      population: 'Advanced degree'
 		    },
 
 		    {
-		      y: 86.3,
+		      y: 95.3,
 		    	x: '2010',
-		      population: 'White only, not Hispanic or Latino'
+		      population: 'Advanced degree'
 		    },
 
 		    {
-		      y: 87.1,
+		      y: 95.2,
 		      x: '2011',
-		      population: 'White only, not Hispanic or Latino'
+		      population: 'Advanced degree'
 		    },
 
 		    {
-		      y: 87.9,
+		      y: 95.0,
 		      x: '2012',
-		    	population: 'Native Hawaiian or Other Pacific Islander'
+		    	population: 'Advanced degree'
 		    }
 		   ]
 		}, 
 
 		{
 			type: 'spline',
+			enableMouseTracking: false,
 		  name: 'Worst',
 		  marker: {
 		  	fillColor: "#000000"
 		  },
+
+		  //set enable mouse tracking to false here 
+
 		  data: 
 		  [
 		    {
-		    	y: 66.7,
+		    	y: 56.9,
 		      x: '2008',
-		      population:'Hispanic or Latino'
+		      population:'< High school'
 		    },
 
 		    {
-		    	y: 67.1,
+		    	y: 55.9,
 		      x: '2009',
-		      population:'Hispanic or Latino'
+		      population:'< High school'
 		    },
 
 		    {
-		    	y: 56.0,
+		    	y: 54.4,
 		      x: '2010',
-		      population:'American Indian or Alaska Native'
+		      population:'< High school'
 		    },
 
 		    {
-		    	y: 65.8,
+		    	y: 57.5,
 		      x: '2011',
-		      population:'American Indian or Alaska Native'
+		      population:'< High school'
 		    },
 
 		    {
-		    	y: 69.6,
+		    	y: 56.3,
 		      x: '2012',
-		      population:'Hispanic or Latino'
+		      population:'< High school'
 		    }
 		  ]
 		}
@@ -137,7 +142,7 @@ $(document).ready(function() {
 		{
 
 			title: {
-				text: 'Disparities overview by Race/Ethnicity',
+				text: 'Disparities overview by Educational Attainment',
 				align: 'left',
 				style: {
 					display: 'none'
@@ -149,7 +154,7 @@ $(document).ready(function() {
        },
 
 			subtitle: {
-				text: 'Persons with medical insurance (percent, <65 years)',
+				text: 'Persons aged 25 years and over',
 				align: 'left',
 				style: {
 					display: 'none'
@@ -176,6 +181,12 @@ $(document).ready(function() {
 	    	//	backgroundColor: 'red'
 	    	//}
 	    },
+
+			navigation: {
+      	buttonOptions: {
+        	enabled: false
+      	}
+    	},
 
 	    xAxis: {
 	    	//categories: ['2008', '2009', '2010', '2011', '2012'], 
@@ -223,6 +234,8 @@ $(document).ready(function() {
 				}, 
 
 				spline: {
+
+
 					dataLabels: {
 						useHTML: true,
 						style: {
@@ -230,6 +243,7 @@ $(document).ready(function() {
 							//width: '80px',
 							fontSize: '9px'
 						},
+
 						enabled: true,
 						formatter: function(){
 							if (this.series.name == 'Best') {

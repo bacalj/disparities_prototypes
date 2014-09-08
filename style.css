@@ -266,12 +266,15 @@ div.popLabel {
 div.popLabel.worst {
 	top:47px;
 	color: #B7404A;
+	//border:1px dotted red;
 }
 
 div.popLabel.best {
 	color: #0980AF; //blue
 	padding-bottom: 3px;
 	height:45px;
+	//border:1px dotted red;
+	top:-28px;
 }
 
 /* Data text and table area */
