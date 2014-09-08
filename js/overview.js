@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var myData =
+	var myData = 
 	[
 		{
 			type: 'columnrange',
@@ -183,7 +183,7 @@ $(document).ready(function() {
 	    		useHTML: true,
 	    		formatter: function() {
 	    			console.log(this.value);
-	    			var link = '<a href="details_chart_' + this.value + '.html">' + this.value + '</a>';
+	    			var link = '<a href="page_details_' + this.value + '.html">' + this.value + '</a>';
 	    			console.log(link);
             return link;
 	    		}
