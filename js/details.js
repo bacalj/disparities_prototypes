@@ -100,89 +100,58 @@ $(document).ready(function() {
 			{
 				name: 'errory',
 				type: 'errorbar',
+				zIndex: 4,
 				data: 
 				[
-					[85.7,86.9], 
-					[84.2,85.4], 
-					[82.0,86.5], 
-					[81.3, 84.5],
-					[81.8, 83.0],
-					[78.3, 80.4],
-					[78.2, 80.4],
-					[62.4, 88.8],
-					[66.7, 69.2],
-					[39.6, 72.3]
+					[54.1,57.7], 
+					[74.7, 76.8], 
+					[79.8, 81.9], 
+					[82.7, 85.4],
+					[90.9, 92.4],
+					[94.4, 95.9]
 				]
 			},
 
 			{
 				type: 'column',
-				name: 'Finns',
-				data: [66.3],
+				name: '< High school',
+				data: [55.9],
 				pointPlacement: 0
 			}, 
 
 			{
 				type: 'column',
-				name: 'Magyars',
-				data: [86.3],
+				name: 'High school',
+				data: [75.7],
 				pointPlacement: 1
 			}, 
 
 			{
 				type: 'column',
-				name: 'Uighurs',
-				data: [76.3],
+				name: 'Some college',
+				data: [80.9],
 				pointPlacement: 2
 			},
 
 			{
 				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
+				name: 'Associates degree',
+				data: [84.1],
 				pointPlacement: 3
 			},
 
 			{
 				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
+				name: '4-year college degree',
+				data: [91.6],
 				pointPlacement: 4
 			},
 
 			{
 				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
+				name: 'Advanced degree',
+				data: [95.1],
 				pointPlacement: 5
-			},
-		
-			{
-				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
-				pointPlacement: 6
-			},
-				
-							{
-				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
-				pointPlacement: 7
-			},
-
-			{
-				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
-				pointPlacement: 8
-			},
-		
-			{
-				type: 'column',
-				name: 'Kazakhs',
-				data: [46.3],
-				pointPlacement: 9
 			}
 
 			/*going back to object style for now
