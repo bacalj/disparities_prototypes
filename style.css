@@ -64,10 +64,10 @@ p {
 }
 
 .icon-3 {
-	background-color: #EF9017;
-	border-radius: 23px;
-	width:23px;
-	height:23px;
+	//background-color: #EF9017;
+	//border-radius: 23px;
+	//width:23px;
+	//height:23px;
 	float:left;
 	margin-top: -7px;
 	padding:5px;
@@ -77,6 +77,10 @@ p {
 
 p#spotlight {
 	margin:5px 5px 5px 0px;
+}
+
+#spotlight-title {
+	line-height: 2.3
 }
 
 #icon-details-small {
@@ -110,6 +114,12 @@ p#spotlight {
 */
 
 .title-text-area {
+	padding-left: 10px;
+	width:650px;
+	margin-top: -17px;
+}
+
+.title-text-area-2 {
 	padding-left: 10px;
 	width:650px;
 	//margin-top: -17px;
