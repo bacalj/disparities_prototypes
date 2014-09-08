@@ -41,7 +41,7 @@ $(document).ready(function() {
 		},
 
 		xAxis:  {
-			categories: [
+			/*categories: [
 				'White only, not Hispanic or Latino	', 
 				'Not Hispanic or Latino', 
 				'2 or more races', 
@@ -52,7 +52,7 @@ $(document).ready(function() {
 				'Native Hawaiian or Other Pacific Islander only',
 				'Hispanic or Latino',
 				'American Indian or Alaska Native only'
-			],
+			],*/
 
 			labels: {
 				enabled:false, 
@@ -68,7 +68,8 @@ $(document).ready(function() {
 
 		plotOptions: {
 			column: {
-				colorByPoint: true
+				colorByPoint: false, 
+				grouping: false
 			}
 		},
 	 	/*scrollbar: {
@@ -95,11 +96,6 @@ $(document).ready(function() {
 
 		series: 
 		[
-			{
-				name: 'Disparities details',
-				type: 'column',
-				data: [86.3, 84.8, 84.2, 82.9, 82.4, 79.4, 79.3, 75.6, 68.0, 56.0]
-			}, 
 
 			{
 				name: 'errory',
@@ -117,48 +113,87 @@ $(document).ready(function() {
 					[66.7, 69.2],
 					[39.6, 72.3]
 				]
+			},
+
+			{
+				type: 'column',
+				name: 'Finns',
+				data: [66.3],
+				pointPlacement: 0
+			}, 
+
+			{
+				type: 'column',
+				name: 'Magyars',
+				data: [86.3],
+				pointPlacement: 1
+			}, 
+
+			{
+				type: 'column',
+				name: 'Uighurs',
+				data: [76.3],
+				pointPlacement: 2
+			},
+
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 3
+			},
+
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 4
+			},
+
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 5
+			},
+		
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 6
+			},
+				
+							{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 7
+			},
+
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 8
+			},
+		
+			{
+				type: 'column',
+				name: 'Kazakhs',
+				data: [46.3],
+				pointPlacement: 9
 			}
+
+			/*going back to object style for now
+			{
+				name: 'Disparities details',
+				type: 'column',
+				data: [86.3, 84.8, 84.2, 82.9, 82.4, 79.4, 79.3, 75.6, 68.0, 56.0]
+			}, 
+			*/
 		]
-
-	/*[
-		  //below works, but using above for error bar convenience 
-		  {
-		  	type: 'column',
-		  	name: 'White only, not Hispanic or Latino',
-		  	data: [86.3]
-		  },
-
-		  {
-		  	type: 'column',
-		  	name: '2 or more races',
-		  	data: [86.3]
-		  },
-
-		  {
-		  	type: 'column',
-		  	name: 'Asian only',
-		  	data: [86.3]
-		  },
-
-		  {
-		  	type: 'column',
-		  	name: 'Black or African American only, not Hispanic or Latino',
-		  	data: [86.3]
-		  },
-
-		  {
-		  	type: 'column',
-		  	name: 'Hispanic or Latino',
-		  	data: [86.3]
-		  },
-
-		  {
-		  	type: 'column',
-		  	name: 'American Indian or Alaska Native Only',
-		  	data: [86.3]
-		  }
-		  //commented out above is a working version where each bar is a serie object
-		]*/
+		 
 	});
 
 	$('#toggler').click(function(){
