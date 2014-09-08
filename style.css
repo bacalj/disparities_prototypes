@@ -8,7 +8,7 @@ body {
 	margin: 0 auto;
 	border: 6px solid #f3f3f3;
 	border-radius: 10px;
-	padding: 12px;
+	padding: 15px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ p {
 }
 /* title areas */ 
 .title-wrap {
-	margin-bottom: 8px;
+	margin-bottom: 20px;
 	border:1px dotted white;
 }
 
@@ -35,25 +35,32 @@ p {
 }
 
 .icon {
-	background-color: #0980AF;
-	border-radius: 50px;
-	width:40px;
-	height:40px;
+	//background-color: #0980AF;
+	//border-radius: 50px;
+	//width:40px;
+	//height:40px;
 	float:left;
-	//margin-top: 15px;
+	margin-top: -7px;
 	padding:5px;
-	margin-right: 10px;
+	margin-right: 7px;
+}
+
+.icon-deets {
+	float:left;
+	margin-bottom: -15px;
 }
 
 .icon-details {
-	background-color: #EF9017;
-	border-radius: 50px;
-	width:40px;
-	height:40px;
+	//background-color: #EF9017;
+	//border-radius: 50px;
+	//width:40px;
+	//height:40px;
 	float:left;
 	margin-top: 15px;
 	padding:5px;
-	margin-right: 10px;
+	margin-right:7px;
+	width:100px;
+	display: inline-block;
 }
 
 .icon-3 {
@@ -104,6 +111,8 @@ p#spotlight {
 
 .title-text-area {
 	padding-left: 10px;
+	width:650px;
+	margin-top: -17px;
 }
 
 #title-text {
@@ -136,6 +145,9 @@ p#spotlight {
 	font-size: 12px;
 }
 
+.subheading {
+	margin-top: 15px;
+}
 .subheading span {
 	font-weight: bold;
 }
@@ -146,7 +158,11 @@ p#spotlight {
 	font-size: 12px;
 	margin-top: -30px;
 	color: #0980AF;
+	width:200px;
+	text-align: right;
 }
+
+/* the transport bar */
 
 .transport-bar {
 	width:800px;
@@ -154,56 +170,59 @@ p#spotlight {
 	background-color: #E6EAED;
 	margin-bottom: 10px;
 	color: #0980AF;
-	vertical-align: middle;
-	font-size: 9px;
 	font-weight: bold;
-}
-
-td.transport-left {
-	background-color: #E6EAED;
-}
-
-td.transport-center {
-	background-color: #E6EAED;
-	text-align: center;
-	color:#EF9017;
-}
-
-i.transport-center {
+	height:29px;
 	text-align: center;
 }
 
-td.transport-right {
-	background-color: #E6EAED;
-	text-align: right;
-	vertical-align: top;
-}
-
-.transport-bar td {
-	width:260px;
-}
-
-span.year {
-	font-size: 14px;
-	line-height: 4px;
-}
-
-span.spotlight {
-	color:orange;
-}
-
-div.spacer {
-	width:18px;
-	display:inline-block;
-}
-
-div.year {
+.t-left, .t-right, .t-center {
 	display: inline-block;
-	padding:0px 4px 0px 4px;
+	background-color: #E6EAED;
+	height: 24px;
+	padding:2px;
+	//border:1px dotted orange;
 	font-size: 12px;
-	font-weight: bold;
-	border:1px dotted red;
 }
+
+.t-left {
+	float:left;
+	text-align: left;
+	margin-left: 7px;
+}
+
+.t-right {
+	float: right;
+	text-align: right;
+	margin-right: 7px;
+}
+
+.t-center img {
+	//float: left;
+	padding: 0px 6px 0px 4px;
+}
+
+.t-center span {
+	color:orange;
+	float:right;
+	line-height: 27px;
+}
+
+.t-left span {
+	float:right;
+	line-height: 28px;
+	margin-left: 10px;
+}
+
+.t-right span {
+	float: left;
+	line-height: 28px;
+	margin-right: 10px;
+}
+
+/*
+
+*/
+
 /* within the chart */
 #overview-container, 
 #details-container {
