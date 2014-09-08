@@ -25,8 +25,14 @@ $(document).ready(function() {
 		},
 
 		legend: {
-			enabled: false
+			enabled: true
 		},
+
+		navigation: {
+      buttonOptions: {
+        enabled: false
+      }
+    },
 
 		yAxis: {
 			label: {
@@ -49,7 +55,7 @@ $(document).ready(function() {
 			],
 
 			labels: {
-				enabled:true, 
+				enabled:false, 
 				style: {
 					fontSize:'9px'
 				}
