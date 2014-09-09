@@ -176,10 +176,14 @@ $(document).ready(function() {
 
 	    tooltip: {
 	    	useHTML: true,
-	    	//style: {
-	    	//	fontSize: '10px',
-	    	//	backgroundColor: 'red'
-	    	//}
+	    	//backgroundColor:'rgba(255,255,255,1)',
+	    	formatter: function(){
+	    		var myText = this.point.summaryText;
+	    		var myLabel = '<div style="width:500px; padding:0px; background-color:white;">' + myText + '</div>'
+	    		console.log(this);
+	    		return myLabel;
+        }
+	    	
 	    },
 
 			navigation: {
@@ -227,19 +231,15 @@ $(document).ready(function() {
 				columnrange: {
 					colorByPoint: true,
 					pointWidth: 50, 
-					color: '#9b9b9b',
-					tooltip: {
-						pointFormat: '<span>{point.summaryText}<br</span>'
-					}
+					color: '#9b9b9b',	
 				}, 
 
 				spline: {
-
-
 					dataLabels: {
 						useHTML: true,
 						style: {
 							textAlign: 'center',
+							zIndex: '1 !important',
 							//width: '80px',
 							fontSize: '9px'
 						},

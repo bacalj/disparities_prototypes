@@ -241,17 +241,18 @@ p#spotlight {
 }
 
 .highcharts-tooltip {
-	background-color: #ffffff;
-	z-index: 6;
-	width:400px;
+	z-index: 9999 !important;
+	padding: 0px;
+	white-space: normal;
+	padding:15px;
 }
 
 .highcharts-tooltip span {
   overflow:auto;
-  white-space: normal;
-  width:400px;
+  white-space: normal !important;
   background-color: #ffffff;
-  z-index: 7;
+  z-index: 9999 !important;
+  padding:6px;
 }
 
 div.popLabel {
@@ -266,15 +267,15 @@ div.popLabel {
 div.popLabel.worst {
 	top:47px;
 	color: #B7404A;
-	//border:1px dotted red;
+	z-index: 1 !important;
 }
 
 div.popLabel.best {
 	color: #0980AF; //blue
 	padding-bottom: 3px;
 	height:45px;
-	//border:1px dotted red;
 	top:-28px;
+	z-index: 1 !important;
 }
 
 /* Data text and table area */
