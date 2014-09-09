@@ -21,7 +21,7 @@ $(document).ready(function() {
    				x:2009, 
    				low: 55.9, 
    				high: 95.1, 
-   				color:'#aaaaaa',
+   				color:'orange',
    				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2009</b><ul><li>The best group rate for this objective, 95.1&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 55.9&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 39.3.</li><li>The best group rate was 1.703 times the worst group rate.</li><li>The best group rate was 1.225 times the average rate for all worse-off groups, 77.6&#37;.</li></ul>'
    			}, 
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
    				x:2010, 
    				low: 54.4, 	 
    				high: 95.3, 
-   				color:'orange',
+   				color:'#aaaaaa',
    				summaryText: '<b>Summary measures of health disparities by Educational attainment &#8212; 2010</b><ul><li>The best group rate for this objective, 95.3&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 54.4&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 40.9.</li><li>The best group rate was 1.751 times the worst group rate.</li><li>The best group rate was 1.244 times the average rate for all worse-off groups, 76.6&#37;.</li></ul>'
    			},
 
