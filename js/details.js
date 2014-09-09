@@ -43,7 +43,7 @@ $(document).ready(function() {
     },
 
 		yAxis: {
-			label: {
+			title: {
 				text: '% (percent)'
 			}
 		},
