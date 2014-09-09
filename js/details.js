@@ -10,9 +10,16 @@ $(document).ready(function() {
 			panning: true
 		},
 
+		colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', 
+   '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
+
 		tooltip: {
-			enabled: true,
-			pointFormat: '{point.y}%'
+			formatter: function(){
+				var popu = this.point.series.name;
+				var perc = this.y;
+				var label = popu + ':' + '<b>' + ' ' + perc + '%</b>';
+				return label;
+			}
 		},
 
 		credits: {
