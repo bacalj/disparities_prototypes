@@ -7,6 +7,7 @@ body {
 #body-wrapper {
 	background-image: url(/img/home_bg_texture.png);
 	background-repeat: repeat;
+	//border:1px dotted orange;
 }
 
 #branding {
@@ -31,6 +32,24 @@ body {
 	background-color: white;
 }
 
+.banner {
+	margin-top: -18px;
+	margin-left: -90px;
+}
+
+.footer {
+	height: 130px;
+	background-color: #C8CCD8;
+}
+
+.prefooter {
+	background-color:#234f73;
+	height: 43px;
+	position: relative;
+	width:100%;
+	padding:0px;
+}
+
 h2 {
 	font-size:18px;
 }
@@ -45,6 +64,7 @@ p {
 /* title areas */ 
 .title-wrap {
 	margin-bottom: 10px;
+	margin-top: 10px;
 	//border:1px dotted white;
 }
 
@@ -260,20 +280,28 @@ p#spotlight {
 	width:800px;
 }
 
-.highcharts-tooltip {
-	z-index: 9999 !important;
+.highcharts-tooltip span {
+    background-color:rgba(255, 255, 255, .85);
+    z-index:9999!important;  
+}
+
+/*.highcharts-tooltip {
 	padding: 0px;
 	white-space: normal;
 	padding:15px;
-}
+	background-color: white;
+} */
 
+/*
 .highcharts-tooltip span {
   overflow:auto;
   white-space: normal !important;
   background-color: #ffffff;
   z-index: 9999 !important;
-  padding:6px;
+  //padding:6px;
 }
+*/
+
 
 div.popLabel {
 	width: 83px;
@@ -282,20 +310,27 @@ div.popLabel {
   text-align: center;
   position: relative;
   font-weight: bold;
+  //z-index: 1 !important;
 }
 
 div.popLabel.worst {
 	top:47px;
-	color: #B7404A;
-	z-index: 1 !important;
+	color: #FF0015; //red
+	//z-index: 1 !important;
 }
 
 div.popLabel.best {
-	color: #0980AF; //blue
+	color: #0983C3; //blue
 	padding-bottom: 3px;
 	height:45px;
 	top:-28px;
-	z-index: 1 !important;
+	//z-index: 1 !important;
+}
+
+div.highcharts-xaxis-labels a {
+	font-size: 12px;
+	font-weight: bold;
+	color:#0983C3; //blue
 }
 
 /* Data text and table area */
@@ -396,8 +431,18 @@ p#data-source {
 	font-size: 11px;
 }
 
+#footnotes-text p {
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
 #toggler {
-	margin-left: 30px;
+	margin-left: 50px;
+	display: inline-block;
+	font-weight: bold;
+	color: #0983C3; //blue
+	font-size: 16px;
+	text-decoration: underline;
 }
 
 .clearfix {

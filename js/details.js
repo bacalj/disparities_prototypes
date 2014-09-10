@@ -43,8 +43,10 @@ $(document).ready(function() {
     },
 
 		yAxis: {
+			min:0, 
+			max:100,
 			title: {
-				text: '% (percent)'
+				text: '% (percent)', 
 			}
 		},
 
