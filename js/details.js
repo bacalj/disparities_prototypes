@@ -15,9 +15,10 @@ $(document).ready(function() {
 
 		tooltip: {
 			formatter: function(){
+				console.log(this);
 				var popu = this.point.series.name;
 				var perc = this.y;
-				var label = popu + ':' + '<b>' + ' ' + perc + '%</b>';
+				var label = 'Year: 2010<br>' + popu + ':' + '<b>' + ' ' + perc + '%</b><br>CI/CI';
 				return label;
 			}
 		},
