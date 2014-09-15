@@ -15,11 +15,13 @@ $(document).ready(function() {
 
 		tooltip: {
 			formatter: function(){
-				var myIndex = (this.point);
-				//console.log(myIndex);
-				var popu = this.point.series.name;
-				var perc = this.y;
-				var label = 'Year: 2009<br>' + popu + ':' + '<b>' + ' ' + perc + '%</b><br>';
+				var i = (this.point.series.index) -1;
+				var lo = this.series.chart.options.series[0].data[i][0];
+				var hi = this.series.chart.options.series[0].data[i][1];
+				var ppl = this.point.series.name;
+				var pct = this.y;
+				
+				var label = 'Year: 2009<br>' + ppl + ':' + '<b>' + ' ' + pct + '%</b><br>' + '('+lo+', '+hi+')';
 				return label;
 			}
 		},
