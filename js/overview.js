@@ -5,7 +5,7 @@ $(document).ready(function() {
 		{
 			type: 'columnrange',
 		  name: 'Summary measures of health disparities by Educational attainment &#8212; 2012',
-		  zIndex:0,
+		  //zIndex:0,
 		  pointPlacement:-0.009,
 		  data:
 		  [
@@ -24,7 +24,7 @@ $(document).ready(function() {
    				high: 95.1, 
    				color:'orange',
    				spotlight: 1,
-   				summaryText: '<img style="float:left; margin-bottom:2px; z-index:-999;" src="img/spotlight_icon_small.png"><div style="width:465px; float:left; margin-top:4px; margin-bottom:8px; padding-left:5px; display:inline-block;"><span style="color:orange; font-weight:bold;">Spotlight on Disparities</span></div><br><p><b>Summary measures of health disparities by Educational attainment &#8212; 2009</b><ul><li class="orange">The best group rate for this objective, 95.1&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 55.9&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 39.3.</li><li>The best group rate was 1.703 times the worst group rate.</li><li>The best group rate was 1.225 times the average rate for all worse-off groups, 77.6&#37;.</li></ul>'
+   				summaryText: '<img style="float:left; margin-bottom:2px;" src="img/spotlight_icon_small.png"><div style="width:465px; float:left; margin-top:4px; margin-bottom:8px; padding-left:5px; display:inline-block;"><span style="color:orange; font-weight:bold;">Spotlight on Disparities</span></div><br><p><b>Summary measures of health disparities by Educational attainment &#8212; 2009</b><ul><li class="orange">The best group rate for this objective, 95.1&#37;, was attained by persons aged 25 years and over with an educational attainment level of Advanced degree.</li><li>The worst group rate for this objective, 55.9&#37;, was attained by persons aged 25 years and over with an educational attainment level of < High school.</li><li>The absolute (or range) difference between the best and worst group rates was 39.3.</li><li>The best group rate was 1.703 times the worst group rate.</li><li>The best group rate was 1.225 times the average rate for all worse-off groups, 77.6&#37;.</li></ul>'
    			}, 
 
    			{ 
@@ -197,13 +197,13 @@ $(document).ready(function() {
 
 	    tooltip: {
 	    	backgroundColor:'white',
+	    	borderWidth: 1,
 	    	useHTML: true,
 	   
 	    	formatter: function(){
-	    		var myText = this.point.summaryText; //ADD CONDITIONAL SPOTLIGHT LOGIC HERE AND SPOTLIGHT 1 to DATA OBJECTS
-	    		var myLabel ='<div style="width:600px; padding:5px; overflow:auto; white-space:normal;">' + myText + '</div>';
+	    		var myText = this.point.summaryText;
+	    		var myLabel ='<div class="myTooltip" style="width:600px; overflow:auto; white-space:normal; z-index: 9999;">' + myText + '</div>';
 
-	    		console.log(this);
 	    		return myLabel;
         }
 	    	
@@ -216,12 +216,9 @@ $(document).ready(function() {
     	},
 
 	    xAxis: {
-	    	//categories: ['2008', '2009', '2010', '2011', '2012'], 
 	    	labels: {
 	    		useHTML: true,
 	    		formatter: function() {
-	    			//console.log(this.value); //ADD STYLING and SPOTLIGHT CONDITIONALLY HERE
-
 	    			if (this.value !== 2009) {
 	    					var link = '<a href="page_details_' + this.value + '.html">' + this.value + '</a>';
 	    			} else {
@@ -230,21 +227,6 @@ $(document).ready(function() {
             return link;
 	    		}
 	    	}
-
-	    		/*
-												formatter: function(){
-							if (this.series.name == 'Best') {
-								var label = '<div style="z-index: 1;" class="popLabel best">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
-								return label;
-							}
-
-							else if (this.series.name == 'Worst') {
-								var label = '<div class="popLabel worst">' + '<span style="font-weight: bold; z-index:-9999;">' + this.y + '</span><br>'+ this.point.population + '</div>';
-								return label;
-	    		*/
-
-	    	//min:1, 
-	    	//max:3,
 	    },
 
 	    yAxis: {
@@ -286,12 +268,12 @@ $(document).ready(function() {
 						enabled: true,
 						formatter: function(){
 							if (this.series.name == 'Best') {
-								var label = '<div style="z-index: 1;" class="popLabel best">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel best">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 
 							else if (this.series.name == 'Worst') {
-								var label = '<div class="popLabel worst">' + '<span style="font-weight: bold; z-index:-9999;">' + this.y + '</span><br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel worst">' + '<span font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 						}
