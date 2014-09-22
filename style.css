@@ -449,6 +449,11 @@ p#data-source {
 	clear:both;
 }
 
+.highcharts-tooltip li.orange {
+	color:orange;
+}
+
+
 /* junk pile to salvage
 
 

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	var someValue = 'bob';
 
 	$('#details-container').highcharts({
 
