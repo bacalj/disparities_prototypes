@@ -202,7 +202,7 @@ $(document).ready(function() {
 	   
 	    	formatter: function(){
 	    		var myText = this.point.summaryText;
-	    		var myLabel ='<div class="myTooltip" style="width:600px; overflow:auto; white-space:normal; z-index: 9999;">' + myText + '</div>';
+	    		var myLabel ='<div class="myTooltip" style="width:650px; overflow:auto; white-space:normal;">' + myText + '</div>';
 
 	    		return myLabel;
         }
