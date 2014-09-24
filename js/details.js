@@ -65,6 +65,9 @@ $(document).ready(function() {
 
 		plotOptions: {
 			column: {
+				events: {
+					legendItemClick:false
+				},
 				colorByPoint: false, 
 				grouping: false
 			}

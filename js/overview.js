@@ -242,6 +242,12 @@ $(document).ready(function() {
 
 	    plotOptions: {
 				series:{
+					events: {
+						legendItemClick: function(){
+							return false;
+						}
+					},
+
 					lineWidth: 0,
 					marker: {
 						radius:0, 

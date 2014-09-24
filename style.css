@@ -319,11 +319,12 @@ div.popLabel {
   text-align: center;
   position: relative;
   font-weight: bold;
+  left: -1px;
   z-index: 0 !important;
 }
 
 div.popLabel.worst {
-	top:47px;
+	top:46px;
 	color: #FF0015; //red
 }
 
@@ -331,7 +332,8 @@ div.popLabel.best {
 	color: #0983C3; //blue
 	padding-bottom: 3px;
 	height:45px;
-	top:-28px;
+	top:-27px;
+	left:-1px;
 }
 
 div.highcharts-xaxis-labels a {
