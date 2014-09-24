@@ -268,12 +268,16 @@ $(document).ready(function() {
 						enabled: true,
 						formatter: function(){
 							if (this.series.name == 'Best') {
-								var label = '<div class="popLabel best">' + '<span style="font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel best">' + '<span style="font-weight: bold;">' + 
+								Highcharts.numberFormat(this.y, 1) + 
+								'</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 
 							else if (this.series.name == 'Worst') {
-								var label = '<div class="popLabel worst">' + '<span font-weight: bold;">' + this.y + '</span><br>'+ this.point.population + '</div>';
+								var label = '<div class="popLabel worst">' + '<span font-weight: bold;">' + 
+								Highcharts.numberFormat(this.y, 1) + 
+								'</span><br>'+ this.point.population + '</div>';
 								return label;
 							}
 						}
